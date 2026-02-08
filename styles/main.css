@@ -1,0 +1,631 @@
+/* NDU Analyst Toolkit — Styles v2.2 */
+
+:root {
+    --bg-color: #0f1115;
+    --card-bg: #161b22;
+    --accent-color: #00f0ff;
+    --accent-dim: #00f0ff33;
+    --text-main: #c9d1d9;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+    --success-color: #2ea043;
+    --warning-color: #d29922;
+    --font-mono: 'Courier New', Courier, monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* ─── Reset & Base ────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ─── Container ───────────────────────────────────────────────────── */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ─── Header ──────────────────────────────────────────────────────── */
+
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.site-title {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.site-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+.status-badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    background: var(--accent-dim);
+}
+
+/* ─── Course Selector ─────────────────────────────────────────────── */
+
+.selector-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.selector-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.course-select {
+    flex: 1;
+    max-width: 400px;
+    background: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b949e' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+}
+
+.course-select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px var(--accent-dim);
+}
+
+.course-select option {
+    background: var(--card-bg);
+    color: var(--text-main);
+}
+
+/* ─── About Section (Collapsible) ─────────────────────────────────── */
+
+.about-section {
+    margin-bottom: 30px;
+}
+
+.collapsible-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    user-select: none;
+}
+
+.collapsible-header:hover {
+    border-color: var(--accent-color);
+}
+
+.collapsible-header h2 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.collapse-arrow {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+.collapsible-header.expanded .collapse-arrow {
+    transform: rotate(180deg);
+}
+
+.collapsible-header.expanded {
+    border-radius: 6px 6px 0 0;
+    border-bottom-color: transparent;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.collapsible-content.expanded {
+    max-height: 3000px;
+}
+
+.collapsible-body {
+    padding: 16px;
+}
+
+.collapsible-body h3 {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.collapsible-body h3:first-child {
+    margin-top: 0;
+}
+
+.collapsible-body p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.collapsible-body ul, .collapsible-body ol {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.collapsible-body li {
+    margin-bottom: 4px;
+}
+
+.collapsible-body code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    color: var(--accent-color);
+    background: var(--accent-dim);
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.about-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.about-table th, .about-table td {
+    border: 1px solid var(--border-color);
+    padding: 6px 10px;
+    text-align: left;
+}
+
+.about-table th {
+    background: var(--bg-color);
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.about-table td {
+    color: var(--text-muted);
+}
+
+/* ─── Step Containers ─────────────────────────────────────────────── */
+
+.step-container {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 44px;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    background: var(--bg-color);
+}
+
+.step-title {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.step-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+/* ─── Source Selection Box ────────────────────────────────────────── */
+
+.source-box {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.source-box .source-label {
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* ─── Checklist ───────────────────────────────────────────────────── */
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.checklist li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 3px 0;
+    padding-left: 22px;
+    position: relative;
+}
+
+.checklist li::before {
+    content: "\25A1";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+/* ─── Prompt Card ─────────────────────────────────────────────────── */
+
+.prompt-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.prompt-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+.prompt-card-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.copy-btn {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.copy-btn.copied {
+    background: var(--success-color);
+    color: #fff;
+    border-color: var(--success-color);
+}
+
+.prompt-card-body {
+    padding: 14px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.prompt-text {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* Scrollbar styling for prompt cards */
+.prompt-card-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.prompt-card-body::-webkit-scrollbar-track {
+    background: var(--card-bg);
+}
+
+.prompt-card-body::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+.prompt-card-body::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ─── Action Note ─────────────────────────────────────────────────── */
+
+.action-note {
+    background: var(--bg-color);
+    border-left: 3px solid var(--warning-color);
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+.action-note .note-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--warning-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.action-note p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ─── Instructions Box ────────────────────────────────────────────── */
+
+.instructions-box {
+    background: var(--bg-color);
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+}
+
+.instructions-box .instr-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.instructions-box p, .instructions-box li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.instructions-box ul {
+    padding-left: 18px;
+    margin-top: 4px;
+}
+
+/* ─── Media Tabs ──────────────────────────────────────────────────── */
+
+.media-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0;
+}
+
+.tab-btn {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    color: var(--text-main);
+}
+
+.tab-btn.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────── */
+
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+    padding-top: 16px;
+    text-align: center;
+}
+
+.site-footer p {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ─── Divider ─────────────────────────────────────────────────────── */
+
+.step-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 32px 0;
+}
+
+/* ─── Responsive: Tablet ──────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .status-badge {
+        align-self: flex-start;
+    }
+
+    .course-select {
+        width: 100%;
+        max-width: none;
+    }
+
+    .selector-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+/* ─── Responsive: Mobile ──────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.2rem;
+    }
+
+    .step-number {
+        left: -2px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+
+    .step-container {
+        padding-left: 34px;
+    }
+
+    .media-tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 8px 12px;
+    }
+
+    .prompt-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .copy-btn {
+        align-self: flex-end;
+    }
+}

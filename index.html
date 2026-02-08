@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDU // Analyst Toolkit</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ─── Header ────────────────────────────────────────────── -->
+    <header class="site-header">
+        <div class="header-top">
+            <div>
+                <h1 class="site-title">NDU // ANALYST TOOLKIT</h1>
+                <p class="site-subtitle">NotebookLM Gutting Framework v2.2</p>
+            </div>
+            <span class="status-badge" id="status-badge">SYSTEM: GENERIC PROTOCOL</span>
+        </div>
+        <div class="selector-row">
+            <label class="selector-label" for="course-select">Course Protocol:</label>
+            <select class="course-select" id="course-select">
+                <option value="GENERIC">GENERIC // COURSE-AGNOSTIC</option>
+                <option value="EMSO">EMSO // ELECTROMAGNETIC SPECTRUM</option>
+                <option value="MSW">MSW // MILITARY STRATEGY</option>
+                <option value="SAR">SAR // STRATEGIC ACQUISITION</option>
+                <option value="IA">IA // INDUSTRY ANALYSIS</option>
+                <option value="SSS">SSS // SUBVERSION &amp; TRADECRAFT</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- ─── About Section (Collapsible) ───────────────────────── -->
+    <section class="about-section">
+        <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
+            <h2>About This Toolkit</h2>
+            <span class="collapse-arrow">&#9660;</span>
+        </div>
+        <div class="collapsible-content">
+            <div class="collapsible-body">
+
+                <h3>Purpose</h3>
+                <p>The NDU Analyst Toolkit provides structured prompts for NotebookLM to help Senior Defense University students systematically analyze course readings using the "Gutting a Book" methodology. Each prompt is designed to produce rigorous, skeptical, executive-level analysis filtered through course-specific analytical lenses.</p>
+
+                <h3>Design Principles</h3>
+                <ul>
+                    <li><strong>Syllabus First:</strong> Every analysis begins by extracting Learning Objectives and Issues for Consideration from the syllabus, then filters all output through those objectives.</li>
+                    <li><strong>14-Header Framework:</strong> A standardized analytical template covering Document Identity, Content &amp; Argument, Critical Evaluation, and Significance &amp; Application.</li>
+                    <li><strong>Course-Specific Lenses:</strong> Each course applies persistent analytical frameworks (e.g., SAR uses acquisition process alignment; MSW uses Ends-Ways-Means; EMSO uses Triple Helix).</li>
+                    <li><strong>Batched Workflow:</strong> Readings are analyzed in batches of 3-5 to ensure comprehensive, untruncated output for each document.</li>
+                </ul>
+
+                <h3>The 14 Gutting Headers</h3>
+                <table class="about-table">
+                    <thead>
+                        <tr><th>Section</th><th>#</th><th>Header</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="3">A: Document Identity</td><td>1</td><td>Bibliographic Entry</td></tr>
+                        <tr><td>2</td><td>Author Authority</td></tr>
+                        <tr><td>3</td><td>Document Context</td></tr>
+                        <tr><td rowspan="5">B: Content &amp; Argument</td><td>4</td><td>Scope</td></tr>
+                        <tr><td>5</td><td>Thesis</td></tr>
+                        <tr><td>6</td><td>Content Summary</td></tr>
+                        <tr><td>7</td><td>Evidence</td></tr>
+                        <tr><td>8</td><td>Argument Structure</td></tr>
+                        <tr><td rowspan="2">C: Critical Evaluation</td><td>9</td><td>Critique</td></tr>
+                        <tr><td>10</td><td>Blind Spots</td></tr>
+                        <tr><td rowspan="4">D: Significance &amp; Application</td><td>11</td><td>Importance</td></tr>
+                        <tr><td>12</td><td>Syllabus Alignment</td></tr>
+                        <tr><td>13</td><td>Connections</td></tr>
+                        <tr><td>14</td><td>Key Takeaways</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Batched Workflow (v2.2)</h3>
+                <p>The v2.2 workflow processes readings in manageable batches to prevent output truncation:</p>
+                <ol>
+                    <li><strong>Step 0 — Custom Role:</strong> Configure the AI persona in NotebookLM Chat Settings with course-specific analytical lenses.</li>
+                    <li><strong>Step 1 — Preliminary:</strong> Inventory all readings, verify document integrity, and get batching recommendations.</li>
+                    <li><strong>Step 2 — Gutting Batches:</strong> Analyze 3-5 readings per batch through the full 14-header framework. Repeat for each batch.</li>
+                    <li><strong>Step 3 — Synthesis:</strong> Generate cross-reading synthesis with course-specific Framework Check and Issues for Consideration.</li>
+                    <li><strong>Step 4 — Media (Optional):</strong> Generate Podcast, Video, or Slides overviews using NotebookLM Studio.</li>
+                </ol>
+
+                <h3>Quick Reference: Batch Sizing</h3>
+                <table class="about-table">
+                    <thead>
+                        <tr><th>Total Readings</th><th>Recommended Batches</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1-5</td><td>1 batch</td></tr>
+                        <tr><td>6-10</td><td>2 batches</td></tr>
+                        <tr><td>11-15</td><td>3 batches</td></tr>
+                        <tr><td>16+</td><td>4+ batches</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Troubleshooting</h3>
+                <table class="about-table">
+                    <thead>
+                        <tr><th>Problem</th><th>Solution</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Output truncated</td><td>Set response length to "Longer" in Chat Settings</td></tr>
+                        <tr><td>Gutting too shallow</td><td>Reduce batch size (3 readings instead of 5)</td></tr>
+                        <tr><td>Missing readings flagged</td><td>Check file uploaded; verify filename matches syllabus</td></tr>
+                        <tr><td>OCR failed</td><td>Re-process PDF with Adobe Acrobat Pro or PDF24</td></tr>
+                        <tr><td>Synthesis lacks depth</td><td>Ensure <code>GUTTING_FULL</code> source is checked before running</td></tr>
+                        <tr><td>Course lenses not applied</td><td>Verify Custom Role is set in Chat Settings</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Version</h3>
+                <p>v2.2 — January 2026 | Based on SAAS "Gutting a Book" methodology | Optimized for NotebookLM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Step 0: Custom Role ───────────────────────────────── -->
+    <div class="step-container">
+        <div class="step-number">0</div>
+        <h3 class="step-title">Custom Role (Chat Settings)</h3>
+        <p class="step-description">Configure the AI persona in NotebookLM settings. This prompt establishes course-specific analytical lenses that persist across all interactions.</p>
+
+        <ul class="checklist">
+            <li>Open NotebookLM Chat Panel</li>
+            <li>Click Settings / Sparkle icon</li>
+            <li>Paste Custom Role into "Custom Instructions"</li>
+            <li>Set response length to "Longer"</li>
+        </ul>
+
+        <div class="prompt-card">
+            <div class="prompt-card-header">
+                <span class="prompt-card-label">Custom Role</span>
+                <button class="copy-btn" data-target="prompt-role">COPY</button>
+            </div>
+            <div class="prompt-card-body">
+                <pre class="prompt-text" id="prompt-role"></pre>
+            </div>
+        </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- ─── Step 1: Preliminary ───────────────────────────────── -->
+    <div class="step-container">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Preliminary Analysis</h3>
+        <p class="step-description">Run first to inventory readings, check for missing/unreadable sources, and get batch recommendations.</p>
+
+        <div class="source-box">
+            <span class="source-label">Sources to Check</span>
+            &#9745; Lesson Syllabus &nbsp;&nbsp; &#9745; All Required Readings
+        </div>
+
+        <div class="prompt-card">
+            <div class="prompt-card-header">
+                <span class="prompt-card-label">Preliminary</span>
+                <button class="copy-btn" data-target="prompt-preliminary">COPY</button>
+            </div>
+            <div class="prompt-card-body">
+                <pre class="prompt-text" id="prompt-preliminary"></pre>
+            </div>
+        </div>
+
+        <div class="action-note">
+            <span class="note-label">Action</span>
+            <p>Copy output to Word doc. This becomes part of <code>[XX]_GUTTING_FULL</code>.</p>
+        </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- ─── Step 2: Gutting Batches ───────────────────────────── -->
+    <div class="step-container">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Gutting Batches</h3>
+        <p class="step-description">Run once per batch of 3-5 readings. Repeat as needed based on Preliminary recommendations.</p>
+
+        <div class="source-box">
+            <span class="source-label">Sources to Check</span>
+            &#9745; Lesson Syllabus &nbsp;&nbsp; &#9745; All Required Readings
+        </div>
+
+        <div class="prompt-card">
+            <div class="prompt-card-header">
+                <span class="prompt-card-label">Gutting Batch</span>
+                <button class="copy-btn" data-target="prompt-gutting">COPY</button>
+            </div>
+            <div class="prompt-card-body">
+                <pre class="prompt-text" id="prompt-gutting"></pre>
+            </div>
+        </div>
+
+        <div class="instructions-box">
+            <span class="instr-label">Instructions</span>
+            <ul>
+                <li>Replace <strong>a, b, c, d</strong> with actual reading letters from Preliminary.</li>
+                <li>Adjust batch size as recommended (3-5 readings per batch).</li>
+                <li>Copy each output to Word doc (append after previous batch).</li>
+                <li>After ALL batches complete: Paste full Word doc as NotebookLM text source &rarr; Name: <code>[XX]_GUTTING_FULL</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- ─── Step 3: Synthesis ─────────────────────────────────── -->
+    <div class="step-container">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Synthesis</h3>
+        <p class="step-description">Generate cross-reading synthesis and Issues for Consideration analysis. The Framework Check section updates based on selected course.</p>
+
+        <div class="source-box">
+            <span class="source-label">Sources to Check</span>
+            &#9745; Lesson Syllabus &nbsp;&nbsp; &#9745; All Readings &nbsp;&nbsp; &#9745; <code>[XX]_GUTTING_FULL</code> note
+        </div>
+
+        <div class="prompt-card">
+            <div class="prompt-card-header">
+                <span class="prompt-card-label">Synthesis</span>
+                <button class="copy-btn" data-target="prompt-synthesis">COPY</button>
+            </div>
+            <div class="prompt-card-body">
+                <pre class="prompt-text" id="prompt-synthesis"></pre>
+            </div>
+        </div>
+
+        <div class="action-note">
+            <span class="note-label">Action</span>
+            <p>Copy output to Word doc (insert after Preliminary). Pin as note &rarr; Rename to <code>[XX]_SYNTHESIS_CORE</code> &rarr; Convert to source.</p>
+        </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- ─── Step 4: Media Generation (Optional) ──────────────── -->
+    <div class="step-container">
+        <div class="step-number">4</div>
+        <h3 class="step-title">Media Generation (Optional)</h3>
+        <p class="step-description">Use NotebookLM Audio/Video Studio with these prompts after completing the workflow.</p>
+
+        <div class="source-box">
+            <span class="source-label">Sources to Check</span>
+            &#9745; <code>[XX]_GUTTING_FULL</code> &nbsp;&nbsp; &#9745; <code>[XX]_SYNTHESIS_CORE</code><br>
+            <span style="color: var(--text-muted); font-size: 0.75rem;">Optional: Lesson Syllabus, Original Readings</span>
+        </div>
+
+        <div class="media-section">
+            <div class="media-tabs">
+                <button class="tab-btn active" data-tab="podcast">Podcast</button>
+                <button class="tab-btn" data-tab="video">Video</button>
+                <button class="tab-btn" data-tab="slides">Slides</button>
+            </div>
+
+            <div class="tab-content active" data-tab-content="podcast">
+                <div class="prompt-card" style="border-radius: 0 0 6px 6px; border-top: none;">
+                    <div class="prompt-card-header">
+                        <span class="prompt-card-label">Podcast Overview</span>
+                        <button class="copy-btn" data-target="prompt-podcast">COPY</button>
+                    </div>
+                    <div class="prompt-card-body">
+                        <pre class="prompt-text" id="prompt-podcast"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" data-tab-content="video">
+                <div class="prompt-card" style="border-radius: 0 0 6px 6px; border-top: none;">
+                    <div class="prompt-card-header">
+                        <span class="prompt-card-label">Video Overview</span>
+                        <button class="copy-btn" data-target="prompt-video">COPY</button>
+                    </div>
+                    <div class="prompt-card-body">
+                        <pre class="prompt-text" id="prompt-video"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" data-tab-content="slides">
+                <div class="prompt-card" style="border-radius: 0 0 6px 6px; border-top: none;">
+                    <div class="prompt-card-header">
+                        <span class="prompt-card-label">Slides Overview (Study Aid)</span>
+                        <button class="copy-btn" data-target="prompt-slides">COPY</button>
+                    </div>
+                    <div class="prompt-card-body">
+                        <pre class="prompt-text" id="prompt-slides"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── Footer ────────────────────────────────────────────── -->
+    <footer class="site-footer">
+        <p>NDU Analyst Toolkit v2.2 &mdash; January 2026</p>
+        <p>Based on SAAS "Gutting a Book" methodology &bull; Optimized for NotebookLM</p>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="data/prompts.js"></script>
+<script src="scripts/main.js"></script>
+
+<!-- Populate shared prompts that don't change with course selection -->
+<script>
+    document.getElementById("prompt-preliminary").textContent = PRELIMINARY_PROMPT;
+    document.getElementById("prompt-gutting").textContent = GUTTING_PROMPT;
+    document.getElementById("prompt-podcast").textContent = MEDIA_PROMPTS.podcast;
+    document.getElementById("prompt-video").textContent = MEDIA_PROMPTS.video;
+    document.getElementById("prompt-slides").textContent = MEDIA_PROMPTS.slides;
+</script>
+
+</body>
+</html>
