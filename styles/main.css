@@ -78,6 +78,18 @@ body {
     margin-top: 4px;
 }
 
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.corner-logo {
+    width: 44px;
+    height: 44px;
+}
+
 .status-badge {
     font-family: var(--font-mono);
     font-size: 0.7rem;
