@@ -611,21 +611,23 @@ Script Structure:
 Purpose: These are study aids, not briefing slides. Prioritize information density over white space.
 Visual Style Rules:
 - Clean, professional, readable at desk (not projected)
-- Dense text is acceptable\u2014this is for learning, not presenting
+- Dense text is acceptable—this is for learning, not presenting
 - Use visual hierarchy: clear section headers within slides
 - Include framework diagrams where applicable
 - Crucial: Spell out all acronyms on first use, then abbreviate
+- No classification markings: Do not add any classification, handling, or dissemination caveats to any slide (e.g., no UNCLASSIFIED, SECRET, FOUO, CUI, or similar markings). These are personal study aids, not official government documents.
+
 Slide Structure:
 1. Title Slide: Lesson number, title, and central question from syllabus
 2. Learning Objectives Slide: List objectives and Issues for Consideration
-3. Reading Slide(s) \u2014 ONE SLIDE PER READING containing:
-   - Author Authority, Document Context, Thesis
-   - Content Summary (3-5 bullets)
-   - Critique, Blind Spots
-   - Syllabus Alignment, Key Takeaways
+3. Reading Slide(s) — ONE SLIDE PER READING containing:
+- Author Authority, Document Context, Thesis
+- Content Summary (3-5 bullets)
+- Critique, Blind Spots
+- Syllabus Alignment, Key Takeaways
 4. Framework Application Slide(s): Visualize primary analytical framework(s)
 5. Cross-Reading Synthesis Slide: Convergence, Divergence, Coverage Gaps
 6. Integration Narrative Slide: The "meta-thesis"
 7. Seminar Prep Slide: Issues with brief answers, 3-5 discussion questions
-Constraint: If readings are missing from sources, note this on the Title Slide.`
+8. Constraint: If readings are missing from sources, note this on the Title Slide.`
 };
