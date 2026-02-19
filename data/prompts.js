@@ -629,3 +629,10 @@ Slide Structure:
 7. Seminar Prep Slide: Issues with brief answers, 3-5 discussion questions
 Constraint: If readings are missing from sources, note this on the Title Slide.`
 };
+
+// ─── Freeze Data Objects (Prevent Console Tampering) ─────────────────
+Object.freeze(COURSE_OPTIONS);
+Object.freeze(CUSTOM_ROLES);
+Object.freeze(FRAMEWORK_CHECKS);
+Object.freeze(SEMINAR_HOOKS);
+Object.freeze(MEDIA_PROMPTS);

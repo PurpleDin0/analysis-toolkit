@@ -71,10 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ─── Media Tabs ──────────────────────────────────────────────
+    var VALID_TABS = ["podcast", "video", "slides"];
     document.querySelectorAll(".tab-btn").forEach(function (tabBtn) {
         tabBtn.addEventListener("click", function () {
             var tabGroup = this.closest(".media-section");
             var targetTab = this.getAttribute("data-tab");
+            if (VALID_TABS.indexOf(targetTab) === -1) return;
 
             // Deactivate all tabs in group
             tabGroup.querySelectorAll(".tab-btn").forEach(function (t) {
@@ -89,6 +91,13 @@ document.addEventListener("DOMContentLoaded", function () {
             tabGroup.querySelector('[data-tab-content="' + targetTab + '"]').classList.add("active");
         });
     });
+
+    // ─── Populate Shared Prompts ───────────────────────────────────
+    document.getElementById("prompt-preliminary").textContent = PRELIMINARY_PROMPT;
+    document.getElementById("prompt-gutting").textContent = GUTTING_PROMPT;
+    document.getElementById("prompt-podcast").textContent = MEDIA_PROMPTS.podcast;
+    document.getElementById("prompt-video").textContent = MEDIA_PROMPTS.video;
+    document.getElementById("prompt-slides").textContent = MEDIA_PROMPTS.slides;
 
     // ─── Initialize ──────────────────────────────────────────────
     updateCourseContent();

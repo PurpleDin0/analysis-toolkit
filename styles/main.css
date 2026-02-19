@@ -344,6 +344,11 @@ body {
     display: block;
 }
 
+.source-hint {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
 /* ─── Checklist ───────────────────────────────────────────────────── */
 
 .checklist {
@@ -376,6 +381,11 @@ body {
     border-radius: 6px;
     margin-bottom: 12px;
     overflow: hidden;
+}
+
+.prompt-card--tab {
+    border-radius: 0 0 6px 6px;
+    border-top: none;
 }
 
 .prompt-card-header {
