@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Style Builder</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <a href="index.html" class="back-nav">Home</a>
+
+    <!-- ─── Header ─────────────────────────────────────────────── -->
+    <header class="site-header">
+        <div class="header-top">
+            <div>
+                <h1 class="site-title" style="color: #a78bfa;">Writing Style Builder</h1>
+                <p class="site-subtitle">AI Voice Preservation Framework v2.0</p>
+            </div>
+            <div class="header-right">
+                <svg class="corner-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="silverChrome2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#d1d5db;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#9ca3af;stop-opacity:1" />
+                            <stop offset="75%" style="stop-color:#e5e7eb;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="dropShadow2" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+                        </filter>
+                    </defs>
+                    <g stroke="none">
+                        <path d="M100,100 L55,22 L145,22 Z" fill="#3b1f6b" />
+                        <path d="M100,100 L145,22 L190,100 Z" fill="#4c1d95" />
+                        <path d="M100,100 L190,100 L145,178 Z" fill="#3b1f6b" />
+                        <path d="M100,100 L145,178 L55,178 Z" fill="#4c1d95" />
+                        <path d="M100,100 L55,178 L10,100 Z" fill="#3b1f6b" />
+                        <path d="M100,100 L10,100 L55,22 Z" fill="#5b21b6" />
+                    </g>
+                    <path d="M 20 55 L 100 155 L 165 70 L 165 90 L 185 35 L 138 68 L 158 65 L 100 140 L 20 55 Z"
+                          fill="url(#silverChrome2)" filter="url(#dropShadow2)" stroke="#ffffff" stroke-width="0.5" />
+                </svg>
+                <span class="status-badge" style="color: #a78bfa; border-color: #a78bfa; background: rgba(167,139,250,0.1);">SYSTEM: VOICE ANALYSIS</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ─── About Section (Collapsible) ────────────────────────── -->
+    <section class="about-section">
+        <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
+            <h2>About This Tool</h2>
+            <span class="collapse-arrow">&#9660;</span>
+        </div>
+        <div class="collapsible-content">
+            <div class="collapsible-body">
+
+                <h3>What This Is</h3>
+                <p>The Writing Style Builder is a prompt file you upload to an AI chat tool (Claude, ChatGPT, Gemini) along with samples of your own writing. The AI asks you questions, analyzes your samples, and produces a personalized style guide you can reuse in any future AI-assisted writing.</p>
+                <p>Works with: Claude.ai, ChatGPT, Gemini, or any AI chat tool that accepts file uploads.</p>
+
+                <h3>What You Get (5 Deliverables)</h3>
+                <table class="about-table">
+                    <thead>
+                        <tr><th>#</th><th>Deliverable</th><th>What It Is</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Style Analysis</td><td>Detailed breakdown of your writing patterns with examples from your work</td></tr>
+                        <tr><td>2</td><td>Prompt Template</td><td>A self-contained prompt to paste into any future AI conversation</td></tr>
+                        <tr><td>3</td><td>User Style Config</td><td>Condensed version (under 500 words) for Claude.ai Profile settings</td></tr>
+                        <tr><td>4</td><td>Test Sample</td><td>500-750 word piece demonstrating your style, with AI self-audit</td></tr>
+                        <tr><td>5</td><td>Usage Guide</td><td>Instructions for using, iterating, and adapting your style guide</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Time Budget</h3>
+                <p>30-45 minutes for initial build + 15-30 minutes to test and refine.</p>
+
+                <h3>Who This Is For</h3>
+                <p>Students, academics, and professionals who use AI writing tools and want output that sounds like them, not like a chatbot. Instructors can use the Writing Style Builder as a standalone assignment, a pre-writing exercise for major papers, or as an AI literacy teaching tool.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Section: AI Contamination Problem ──────────────────── -->
+    <div class="ws-step-container">
+        <h2 class="ws-section-header" style="color: #f97316; border-bottom-color: rgba(249,115,22,0.3);">The AI Contamination Problem</h2>
+
+        <div class="concept-card">
+            <p>Most people assume that if you give an AI your best writing samples, it will write like you. That is not what happens.</p>
+            <p>The AI correctly identifies your patterns, then injects its own default habits into the output. Your clean, authentic voice comes back contaminated with phrases and structures you never used.</p>
+        </div>
+
+        <div class="formula-box">
+            <p>Your style guide &nbsp;+&nbsp; AI defaults &nbsp;= &nbsp;<span class="formula-result">Contaminated output</span></p>
+        </div>
+
+        <h3 class="ws-section-header" style="font-size: 0.75rem; margin-top: 20px;">Before &amp; After: The Contamination in Action</h3>
+
+        <div class="contamination-example clean">
+            <span class="contamination-label good">Your original writing</span>
+            <blockquote>"The experiment tested three variables across five trials. Temperature emerged as the dominant factor, influencing outcomes 40% more than pressure or time."</blockquote>
+        </div>
+
+        <div class="contamination-example">
+            <span class="contamination-label warn">AI output "in your style" — without negative constraints</span>
+            <blockquote>"It's worth noting that the experiment examined a pivotal set of variables—temperature, pressure, and time—across multiple trials, highlighting the transformative nature of temperature's impact. Moreover, the results served as a testament to temperature's groundbreaking significance, demonstrating its influence on outcomes (a remarkable 40% more than pressure or time), thereby showcasing the robust relationship between thermal conditions and experimental results."</blockquote>
+        </div>
+
+        <div class="concept-card" style="margin-top: 12px;">
+            <p>Two sentences became one bloated paragraph. The data stayed the same. The voice changed completely. Every contaminated pattern was injected by the AI:</p>
+            <p><strong style="color: #f97316;">"It's worth noting that"</strong> — padding opener &nbsp;|&nbsp; <strong style="color: #f97316;">"pivotal set"</strong> — importance puffing &nbsp;|&nbsp; <strong style="color: #f97316;">em dashes</strong> — not in the original &nbsp;|&nbsp; <strong style="color: #f97316;">"highlighting the transformative nature"</strong> — trailing participle + generic superlative &nbsp;|&nbsp; <strong style="color: #f97316;">"Moreover"</strong> — formulaic transition &nbsp;|&nbsp; <strong style="color: #f97316;">"served as a testament to"</strong> — importance puffing &nbsp;|&nbsp; <strong style="color: #f97316;">"groundbreaking significance"</strong> — generic superlative &nbsp;|&nbsp; <strong style="color: #f97316;">"robust relationship"</strong> — marketing language</p>
+        </div>
+
+        <h3 class="ws-section-header" style="font-size: 0.75rem; margin-top: 20px;">Why It Happens</h3>
+
+        <div class="concept-card">
+            <p>AI models develop default writing habits from training on billions of words: em dashes for asides, groups of three, "It's not just X, it's Y" contrasts, importance puffing phrases, trailing participles, generic superlatives. These patterns activate by default.</p>
+            <p>A style guide that only describes what <strong>to do</strong> leaves gaps. The AI fills those gaps with its own tendencies. Without a rule against em dashes, the AI adds them. Without a rule against "pivotal," the AI uses it. Without a rule against trailing participles, every sentence grows a dangling clause.</p>
+            <p><strong>The fix is explicit negative constraints</strong> — a "Do Not Use" list that bans specific AI patterns from your output. Positive rules alone are not enough.</p>
+        </div>
+
+        <div class="formula-box">
+            <p>Your style guide &nbsp;+&nbsp; explicit negative constraints &nbsp;= &nbsp;<span class="formula-result" style="color: #2ea043;">Authentic voice preserved</span></p>
+        </div>
+
+        <h3 class="ws-section-header" style="font-size: 0.75rem; margin-top: 20px;">Common AI Patterns the Style Guide Bans</h3>
+
+        <div class="ban-grid">
+            <div class="ban-category">
+                <span class="ban-category-title">Importance Puffing</span>
+                <ul>
+                    <li>"pivotal moment," "notable example"</li>
+                    <li>"significant shift," "crucial element"</li>
+                    <li>"serves as a testament to"</li>
+                    <li>Sentence-initial "Importantly," "Notably"</li>
+                </ul>
+            </div>
+            <div class="ban-category">
+                <span class="ban-category-title">Trailing Participles</span>
+                <ul>
+                    <li>"reflecting the importance of"</li>
+                    <li>"highlighting the need for"</li>
+                    <li>"demonstrating the value of"</li>
+                    <li>"showcasing the potential of"</li>
+                </ul>
+            </div>
+            <div class="ban-category">
+                <span class="ban-category-title">Padding &amp; Hedging</span>
+                <ul>
+                    <li>"It is worth noting that"</li>
+                    <li>"It is important to recognize"</li>
+                    <li>"One might argue," "In many ways"</li>
+                    <li>"To a certain extent"</li>
+                </ul>
+            </div>
+            <div class="ban-category">
+                <span class="ban-category-title">Generic Superlatives</span>
+                <ul>
+                    <li>"groundbreaking," "transformative"</li>
+                    <li>"cutting-edge," "revolutionary"</li>
+                    <li>"game-changing," "unprecedented"</li>
+                    <li>"paradigm-shifting"</li>
+                </ul>
+            </div>
+            <div class="ban-category">
+                <span class="ban-category-title">Marketing Language</span>
+                <ul>
+                    <li>"robust," "dynamic," "seamless"</li>
+                    <li>"leverage" (say "use"), "utilize"</li>
+                    <li>"ecosystem," "landscape," "tapestry"</li>
+                    <li>"synergistic," "holistic"</li>
+                </ul>
+            </div>
+            <div class="ban-category">
+                <span class="ban-category-title">Structural AI Tells</span>
+                <ul>
+                    <li>Em dashes as default separator</li>
+                    <li>Triple lists (vary: 2, 4, 5 items)</li>
+                    <li>"It's not just X, it's Y" contrasts</li>
+                    <li>"Moreover," "Furthermore," "Additionally"</li>
+                </ul>
+            </div>
+            <div class="ban-category" style="grid-column: 1 / -1;">
+                <span class="ban-category-title">AI Filler Phrases</span>
+                <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px;">
+                    <li>"At its core," "At the heart of"</li>
+                    <li>"delve into," "shed light on"</li>
+                    <li>"In an era of," "In today's landscape"</li>
+                    <li>"nuanced understanding," "multifaceted"</li>
+                    <li>"navigate" (metaphorical), "foster" (generic)</li>
+                    <li>"interplay between"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="action-note" style="margin-top: 16px;">
+            <span class="note-label" style="color: #f97316;">Key Misconception</span>
+            <p>This is <strong>not</strong> about detecting AI in your writing. It is about preventing AI from contaminating your voice when it writes <em>for</em> you. Even if your own writing is clean and authentic, the AI will still inject its defaults. Negative constraints are mandatory, not optional.</p>
+        </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- ─── Section: Student Guide ──────────────────────────────── -->
+    <div class="ws-step-container">
+        <h2 class="ws-section-header">Student Guide</h2>
+
+        <div class="concept-card" style="margin-bottom: 20px;">
+            <p><strong>What You Need:</strong> The Writing Style Builder prompt (below) &bull; 3-5 samples of your own writing (2,000-5,000 words total) &bull; Access to Claude.ai, ChatGPT, Gemini, or another AI chat tool</p>
+        </div>
+
+        <h3 class="ws-section-header" style="font-size: 0.75rem;">Choosing Your Writing Samples</h3>
+        <div class="concept-card" style="margin-bottom: 20px;">
+            <p><strong>Good samples:</strong> Papers where you felt confident in your writing. Work that sounds like you. Different types of writing if you write for different contexts (academic, professional, creative).</p>
+            <p><strong>Bad samples:</strong> Writing you rushed through. Papers you rewrote to match what you thought the professor wanted. Someone else's work.</p>
+            <p>Do not "clean up" your samples beyond fixing obvious typos. The AI needs to see your actual patterns, not an idealized version.</p>
+        </div>
+
+        <h3 class="ws-section-header" style="font-size: 0.75rem;">Step by Step</h3>
+        <ul class="numbered-steps">
+            <li>
+                <div class="step-text">
+                    <strong>Open a new conversation in your AI tool</strong>
+                    <p>Claude.ai, ChatGPT, Gemini — any AI chat tool that accepts file uploads.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-text">
+                    <strong>Upload the Writing Style Builder prompt</strong>
+                    <p>Copy the prompt from the card below and paste it into the chat, or upload the file if your tool supports file uploads. Include your 3-5 writing samples in the same message or as follow-up attachments.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-text">
+                    <strong>Answer the AI's questions</strong>
+                    <p>The AI will ask about your writing context, tone, structure, evidence habits, and personal patterns. Answer honestly. There are no wrong answers. The goal is to capture what you actually do, not what you think you should do.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-text">
+                    <strong>Review the test sample</strong>
+                    <p>The AI writes a test piece in your style before delivering the full package. Read it carefully. Does it sound like you? The AI will also flag any contamination it caught in its own self-audit.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-text">
+                    <strong>Iterate until it matches your voice</strong>
+                    <p>If the test sample doesn't sound right, tell the AI what's off. Be specific: "I wouldn't use that phrase," "My paragraphs are shorter than that," "I don't open with questions." The AI will revise and ask again.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step-text">
+                    <strong>Receive your full style guide package</strong>
+                    <p>Once you approve the test sample, the AI delivers all five deliverables. Save them. These are reusable tools for any future AI-assisted writing.</p>
+                </div>
+            </li>
+        </ul>
+
+        <h3 class="ws-section-header" style="font-size: 0.75rem; margin-top: 20px;">Using Your Style Guide After This</h3>
+        <div class="concept-card">
+            <p><strong>In new AI conversations:</strong> Paste your Prompt Template at the start of a conversation, then give the AI your writing task.</p>
+            <p><strong>In Claude.ai settings:</strong> Go to Settings &rarr; Profile &rarr; Writing Style. Paste your User Style Config. Claude will apply your style automatically in every conversation.</p>
+            <p><strong>When results drift:</strong> Tell the AI what's wrong. "That doesn't sound like me. Check my style guide section on [tone/structure/vocabulary]." Iterate until it matches.</p>
+        </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- ─── Section: The Prompt ─────────────────────────────────── -->
+    <div class="ws-step-container">
+        <h2 class="ws-section-header" style="color: #a78bfa; border-bottom-color: rgba(167,139,250,0.3);">The Prompt</h2>
+
+        <div class="instructions-box" style="margin-bottom: 12px;">
+            <span class="instr-label">How to Use</span>
+            <ul>
+                <li>Copy the full text below and paste it into a new AI conversation, <strong>along with 3-5 of your writing samples</strong>.</li>
+                <li>Or save it as a <code>.txt</code> or <code>.md</code> file and upload it directly if your AI tool supports file uploads.</li>
+                <li>Works with Claude.ai, ChatGPT, Gemini, or any AI chat tool.</li>
+                <li>You do not need to edit this prompt. Upload it and follow the AI's lead.</li>
+            </ul>
+        </div>
+
+        <div class="prompt-card">
+            <div class="prompt-card-header">
+                <span class="prompt-card-label" style="color: #a78bfa;">Writing Style Builder Prompt</span>
+                <button class="copy-btn" data-target="ws-prompt-text" id="ws-copy-btn">COPY</button>
+            </div>
+            <div class="prompt-card-body" style="max-height: 400px;">
+                <pre class="prompt-text" id="ws-prompt-text"># Writing Style Builder
+
+**How to use:** Upload this file to Claude.ai (or ChatGPT, Gemini, etc.) along with 3-5 samples of your writing (2,000-5,000 words total). The AI will walk you through the rest.
+
+---
+
+You are a writing style analyst. I want you to analyze my writing samples and build a personalized style guide that preserves my authentic voice when I use AI writing tools.
+
+## Your Process
+
+### Phase 1: Ask Me Questions
+
+Before analyzing my samples, ask me these questions in a conversational format. Do not dump them all at once. Group them naturally (2-3 at a time) and wait for my answers before continuing.
+
+**Context:**
+- What type of writing matters most to me? (Academic, professional, creative, technical, etc.)
+- Who is my primary audience?
+- What contexts will I use this style guide in?
+
+**Tone &amp; Structure:**
+- How formal is my writing? (Very formal, professional, conversational?)
+- Do I lean assertive, diplomatic, neutral, or something else?
+- Do I prefer short paragraphs or longer developed ones?
+- Am I a headers-and-subheadings writer, or do I prefer flowing prose?
+
+**Evidence &amp; Citations:**
+- How do I use evidence? (Heavy citations, occasional references, mostly original analysis?)
+- Do I prefer direct quotes or paraphrasing?
+- What citation style do I use?
+
+**Personal Patterns:**
+- Are there specific phrases, structures, or techniques I always use?
+- Are there things I deliberately avoid?
+- Do I write differently for different audiences? Should I have multiple style configs?
+
+### Phase 2: Analyze My Samples
+
+After I answer your questions, analyze my uploaded writing samples. Extract:
+
+**Quantitative patterns:**
+- Average sentence length and variation
+- Paragraph length and structure
+- Vocabulary complexity level
+- Punctuation habits (comma density, semicolons, parentheses, dashes, colons)
+
+**Qualitative patterns:**
+- How I open and close pieces
+- How I build and structure arguments
+- How I integrate evidence and examples
+- Tone markers and voice characteristics
+- Rhetorical devices I favor
+- Transition patterns between ideas
+- Any signature moves or distinctive habits
+
+### Phase 3: Build the Negative Constraints
+
+This step is mandatory and is the most important part of the style guide.
+
+**The problem you must solve:** When you write "in my style," you will inject your own AI default patterns into my voice unless explicitly prevented. My writing samples may be clean and authentic, but your output will be contaminated with AI tells I never used. The negative constraints prevent you from polluting my voice.
+
+**Default ban list.** Apply all of the following unless my writing samples show I actually use these patterns. If you find any of these patterns in my samples, flag them and ask me whether to keep or ban them.
+
+**Structural AI Tells:**
+- **Do not use** em dashes as default separator (use parentheses, commas, or restructure)
+- **Do not use** triple lists or groups of three as a default (vary: 2, 4, 5 items)
+- **Do not use** formulaic negation contrasts ("It's not just X, it's Y"; "Rather than X, we see Y"; "not only X, but also Y")
+- **Do not use** "moreover," "furthermore," "additionally," "in addition" as default transitions
+
+**Importance Puffing:**
+- **Do not use** "pivotal moment," "significant shift," "broader movement," "notable example," "key aspect," "crucial element"
+- **Do not use** "serves as a testament to," "underscores the importance of," "cannot be overstated"
+- **Do not use** sentence-initial "Importantly," "Notably," "Crucially," "Significantly"
+
+**Trailing Participle Clauses:**
+- **Do not use** "reflecting the importance of," "highlighting the need for"
+- **Do not use** "demonstrating the value of," "showcasing the potential of"
+- **Do not use** "emphasizing the significance of," "illustrating the impact of"
+- **Do not use** "paving the way for," "speaking to the need for"
+
+**Padding &amp; Hedging:**
+- **Do not use** "It is worth noting that," "It is important to recognize," "It is clear that"
+- **Do not use** "One might argue," "It could be suggested that"
+- **Do not use** "To a certain extent," "In many ways," "This raises important questions about"
+
+**Generic Superlatives:**
+- **Do not use** "groundbreaking," "transformative," "cutting-edge," "revolutionary"
+- **Do not use** "game-changing," "paradigm-shifting," "unprecedented"
+
+**Marketing Language:**
+- **Do not use** "robust," "dynamic," "vibrant," "seamless," "innovative," "synergistic," "holistic"
+- **Do not use** "leverage" (say "use"), "utilize" (say "use")
+- **Do not use** "ecosystem," "landscape" (metaphorical), "realm," "tapestry"
+
+**AI Filler Phrases:**
+- **Do not use** "At its core," "At the heart of," "In an era of," "In today's [adjective] landscape"
+- **Do not use** "delve into," "shed light on," "navigate" (metaphorical), "foster" (generic)
+- **Do not use** "nuanced understanding," "multifaceted," "interplay between"
+
+After applying the default ban list and checking it against my samples, ask me if there are field-specific or personal patterns I want to add or remove.
+
+### Phase 4: Build Deliverables
+
+Create these five items:
+
+**1. Style Analysis**
+Detailed breakdown of my writing patterns organized by structure, sentences, tone, vocabulary, evidence use, and distinctive habits. Include specific examples quoted from my samples.
+
+**2. Prompt Template**
+A self-contained prompt I can paste into any new AI conversation to get writing in my style. It should include positive rules (what to do), negative constraints (what not to do), and end with: "JUST APPLY NATURALLY. Do not announce you are following a style guide. Do not add meta-commentary."
+
+**3. User Style Config (for Claude.ai)**
+A condensed version (under 500 words) formatted for pasting into Claude's profile settings (Settings &gt; Profile &gt; Writing Style). Include a note that users on other platforms can upload the full Prompt Template file instead.
+
+**4. Test Sample**
+A 500-750 word piece on a topic relevant to my field, written using my style guide. After writing it, self-audit: identify any place where you may have injected AI patterns despite the constraints. Be honest. Flag them.
+
+**5. Usage Guide**
+Brief instructions on how to use each deliverable, how to iterate and refine, and how to adapt the style for different audiences or contexts.
+
+### Phase 5: Test and Iterate
+
+After delivering the test sample:
+
+1. Show me the test sample first, before the other deliverables.
+2. Point out any AI contamination you caught in your self-audit.
+3. Ask me: "Does this sound like you? What feels off?"
+4. Revise based on my feedback.
+5. Repeat until I confirm the test sample matches my authentic voice.
+6. Only then deliver the final package.
+
+## Rules for You
+
+- Be specific. Pull examples from my actual writing. Do not create generic rules that could apply to anyone.
+- If my samples seem inconsistent, ask me about it. Do not guess.
+- Challenge my style if you see weaknesses, but frame it as observation, not correction.
+- The negative constraints are not optional. They are the most important part.
+- Do not pad your analysis with filler. Be direct.
+- Do not announce that you are following these instructions.</pre>
+            </div>
+        </div>
+    </div>
+
+    <hr class="step-divider">
+
+    <!-- ─── Section: Instructor Guide (Collapsible) ─────────────── -->
+    <section class="about-section">
+        <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
+            <h2>Instructor Guide</h2>
+            <span class="collapse-arrow">&#9660;</span>
+        </div>
+        <div class="collapsible-content">
+            <div class="collapsible-body">
+
+                <h3>The Core Concept: AI Contamination Prevention</h3>
+                <p>This is the insight that makes the assignment work, and the concept students will resist most. When a student provides clean, authentic writing samples and asks an AI to "write in my style," the AI correctly identifies the student's patterns but then injects its own default habits. Em dashes appear where the student never used them. "Pivotal" and "transformative" replace the student's plain language. Trailing participles attach themselves to sentences the student would have ended cleanly.</p>
+                <p>The fix is explicit negative constraints: a "Do Not Use" list that bans specific AI patterns. The critical framing: this is not about detecting AI in their writing. It is about preventing AI from contaminating their voice when it writes for them. Students who understand this engage with the assignment differently.</p>
+
+                <h3>Assignment Options</h3>
+                <ul>
+                    <li><strong>Standalone Assignment:</strong> "Create a custom writing style guide based on your own writing. Use the Writing Style Builder prompt to analyze 3-5 of your best papers (2,000-5,000 words total). Submit your style guide and a 500-word test sample."</li>
+                    <li><strong>Integration with a Major Paper:</strong> "Before starting your thesis or capstone, create a writing style guide. Use it to maintain consistency throughout the project. Submit your style guide with your first draft."</li>
+                    <li><strong>Workshop Format:</strong> Week 1: students build style guides individually. Week 2: peer review, exchanging test samples. Week 3: refinement based on feedback. Week 4: students apply style guides to a writing assignment.</li>
+                    <li><strong>Professional Development:</strong> "Create a style guide that captures your professional voice for memos, reports, and briefings. This becomes a career tool, not just a class assignment."</li>
+                </ul>
+
+                <h3>Suggested Grading Rubric</h3>
+                <table class="about-table">
+                    <thead>
+                        <tr><th>Category</th><th>Weight</th><th>What to Look For</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Style Guide Completeness</td><td>40%</td><td>All five deliverables present. Rules specific and actionable, not generic. Evidence drawn from actual samples. Negative constraints explicit.</td></tr>
+                        <tr><td>Test Sample Quality</td><td>30%</td><td>Demonstrates authentic voice. Follows style guide rules. Avoids AI writing patterns. Appropriate for intended audience.</td></tr>
+                        <tr><td>Metacognitive Awareness</td><td>20%</td><td>Student articulates writing patterns in concrete terms. Understands style choices and their effects. Recognizes AI patterns to avoid.</td></tr>
+                        <tr><td>Practical Usability</td><td>10%</td><td>Style guide is actually usable in future writing. Prompt template properly formatted and self-contained.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Teaching Tips</h3>
+                <ul>
+                    <li><strong>Before the assignment:</strong> Show students the contamination concept live. Take a clean writing sample, ask an AI to write "in that style" without constraints, and show the class what the AI injects. Then show the constrained version. The before/after contrast makes the concept concrete.</li>
+                    <li><strong>During the process:</strong> Push back if students produce generic rules ("be clear and concise" applies to everyone). Challenge them to identify what makes their writing specifically theirs.</li>
+                    <li><strong>After completion:</strong> Have students exchange test samples. Can peers identify whose voice is whose? Discuss what students learned about their own writing.</li>
+                    <li><strong>Common pitfalls:</strong> Generic rules that apply to anyone. Students who skip the iteration step. Students who cherry-pick only "perfect" samples. Students who treat negative constraints as optional.</li>
+                </ul>
+
+                <h3>Common Student Questions</h3>
+                <table class="about-table">
+                    <thead>
+                        <tr><th>Question</th><th>Answer</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>How many writing samples do I need?</td><td>Minimum 3 samples, 2,000-5,000 words total. Choose work that represents authentic voice, not idealized performance.</td></tr>
+                        <tr><td>What if my writing isn't consistent?</td><td>Worth exploring with the AI. The student may need multiple style configs for different contexts, or may have a flexible core style.</td></tr>
+                        <tr><td>Should I fix errors before uploading?</td><td>Fix obvious typos. Do not change actual writing patterns. The AI needs authentic data.</td></tr>
+                        <tr><td>I don't have AI patterns. Why do I need negative constraints?</td><td>Even if the student's writing is clean, the AI will inject its own patterns when writing in their style. Negative constraints prevent contamination — they don't detect AI in their writing.</td></tr>
+                        <tr><td>Can I update my style guide later?</td><td>Yes. Writing evolves. Revisit and refine as needed.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Advanced Variations</h3>
+                <ul>
+                    <li><strong>Upper-level students:</strong> "Compare your undergraduate writing to your current writing. Create two style guides and analyze how your voice has evolved."</li>
+                    <li><strong>Graduate students:</strong> "Create separate style guides for academic papers, policy memos, and public-facing writing. What stays constant? What changes?"</li>
+                    <li><strong>Writing-intensive programs:</strong> "Build your style guide in Week 1. Submit monthly reflections on how you're refining it. Final portfolio includes the evolution of your style guide across the semester."</li>
+                </ul>
+
+                <h3>Ethical Considerations</h3>
+                <p>Be clear with students: they own their style guides. This is about understanding their voice, not creating a writing robot. AI assistance is not AI authorship. Discuss where the line falls between style maintenance and content generation, and how much AI assistance crosses into ghost-writing.</p>
+
+                <h3>Troubleshooting</h3>
+                <table class="about-table">
+                    <thead>
+                        <tr><th>Problem</th><th>Solution</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Style guide is too complicated to use</td><td>Simplify to 5-7 core rules. Details can come later.</td></tr>
+                        <tr><td>Test sample doesn't sound like me</td><td>Expected on the first try. Iterate. This is a feature of the process, not a failure.</td></tr>
+                        <tr><td>Not enough writing samples</td><td>Use what they have (minimum 2,000 words). Update the style guide as they produce more writing.</td></tr>
+                        <tr><td>AI keeps using banned patterns</td><td>Make negative constraints more explicit. Add the specific phrases that keep appearing.</td></tr>
+                        <tr><td>Different samples show different styles</td><td>Explore whether the student needs multiple style configs or a more flexible core system.</td></tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Footer ───────────────────────────────────────────────── -->
+    <footer class="site-footer">
+        <p>Writing Style Builder v2.0 &mdash; February 2026</p>
+        <p>AI Voice Preservation Framework &bull; Works with Claude, ChatGPT, Gemini, and any AI chat tool</p>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
