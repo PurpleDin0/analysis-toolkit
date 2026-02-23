@@ -9,13 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const rolePromptText = document.getElementById("prompt-role");
     const synthesisPromptText = document.getElementById("prompt-synthesis");
 
-    // ─── Course Switching ────────────────────────────────────────
-    courseSelect.addEventListener("change", function () {
-        currentCourse = this.value;
-        updateCourseContent();
-    });
+    // ─── Course Switching (toolkit page only) ────────────────────
+    if (courseSelect) {
+        courseSelect.addEventListener("change", function () {
+            currentCourse = this.value;
+            updateCourseContent();
+        });
+    }
 
     function updateCourseContent() {
+        if (!statusBadge || !rolePromptText || !synthesisPromptText) return;
         // Update status badge
         statusBadge.textContent = "SYSTEM: " + currentCourse + " PROTOCOL";
 
@@ -90,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ─── Initialize ──────────────────────────────────────────────
-    updateCourseContent();
+    // ─── Initialize (toolkit page only) ─────────────────────────
+    if (courseSelect) {
+        updateCourseContent();
+    }
 });
