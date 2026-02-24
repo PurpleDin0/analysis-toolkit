@@ -208,7 +208,7 @@ body {
 }
 
 .collapsible-content.expanded {
-    max-height: 3000px;
+    max-height: 4000px;
 }
 
 .collapsible-body {
@@ -227,6 +227,22 @@ body {
 
 .collapsible-body h3:first-child {
     margin-top: 0;
+}
+
+.collapsible-hint {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-transform: none;
+    letter-spacing: 0.3px;
+    margin-top: 3px;
+    font-weight: normal;
+}
+
+/* Fix padding conflict when numbered-steps is inside collapsible-body */
+.collapsible-body .numbered-steps {
+    padding: 0;
+    margin: 0;
 }
 
 .collapsible-body p {
@@ -973,6 +989,129 @@ body {
 .formula-box .formula-result {
     color: var(--accent-color);
     font-weight: 700;
+}
+
+/* ─── Prompt Card Actions (minimize + copy row) ───────────────────── */
+
+.prompt-card-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.prompt-minimize-btn {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.prompt-minimize-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-muted);
+}
+
+.prompt-card-body.minimized {
+    display: none;
+}
+
+/* ─── Floating Section Nav ────────────────────────────────────────── */
+
+.floating-nav {
+    position: fixed;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 100;
+}
+
+.floating-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    text-decoration: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.floating-nav-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-align: right;
+    opacity: 0;
+    transform: translateX(6px);
+    transition: opacity 0.2s, transform 0.2s, color 0.2s;
+    pointer-events: none;
+}
+
+.floating-nav-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+/* Show all labels when hovering the nav as a whole */
+.floating-nav:hover .floating-nav-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.floating-nav-item:hover .floating-nav-label {
+    color: var(--text-main);
+}
+
+.floating-nav-item:hover .floating-nav-dot {
+    border-color: var(--text-muted);
+    background: var(--text-muted);
+}
+
+/* Active section: dot lights up, label always visible */
+.floating-nav-item.active .floating-nav-dot {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    box-shadow: 0 0 6px var(--accent-color);
+}
+
+.floating-nav-item.active .floating-nav-label {
+    color: var(--accent-color);
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Purple accent variant (writing style page) */
+.floating-nav.nav-purple .floating-nav-item.active .floating-nav-dot {
+    border-color: #a78bfa;
+    background: #a78bfa;
+    box-shadow: 0 0 6px #a78bfa;
+}
+
+.floating-nav.nav-purple .floating-nav-item.active .floating-nav-label {
+    color: #a78bfa;
+}
+
+@media (max-width: 1100px) {
+    .floating-nav {
+        display: none;
+    }
 }
 
 /* ─── Responsive: Tablet ──────────────────────────────────────────── */

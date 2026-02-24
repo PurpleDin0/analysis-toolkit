@@ -68,10 +68,77 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".collapsible-header").forEach(function (header) {
         header.addEventListener("click", function () {
             var content = this.nextElementSibling;
-            this.classList.toggle("expanded");
+            var expanded = this.classList.toggle("expanded");
             content.classList.toggle("expanded");
+            this.setAttribute("aria-expanded", expanded ? "true" : "false");
         });
     });
+
+    // ─── Prompt Minimize Toggle ───────────────────────────────────
+    document.querySelectorAll(".prompt-minimize-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var bodyId = this.getAttribute("data-target-body");
+            var body = document.getElementById(bodyId);
+            if (!body) return;
+            if (body.classList.contains("minimized")) {
+                body.classList.remove("minimized");
+                this.textContent = "MINIMIZE";
+            } else {
+                body.classList.add("minimized");
+                this.textContent = "EXPAND";
+            }
+        });
+    });
+
+    // ─── Floating Nav Scroll Tracking ────────────────────────────
+    var floatingNavItems = document.querySelectorAll(".floating-nav-item");
+    if (floatingNavItems.length > 0) {
+        var sectionIds = [];
+        floatingNavItems.forEach(function (item) {
+            var href = item.getAttribute("href");
+            if (href && href.charAt(0) === "#") {
+                sectionIds.push(href.substring(1));
+            }
+        });
+
+        function updateActiveNav() {
+            var activeId = sectionIds[0];
+            sectionIds.forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el && el.getBoundingClientRect().top <= 120) {
+                    activeId = id;
+                }
+            });
+            floatingNavItems.forEach(function (item) {
+                var href = item.getAttribute("href");
+                if (href === "#" + activeId) {
+                    item.classList.add("active");
+                } else {
+                    item.classList.remove("active");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", updateActiveNav, { passive: true });
+        updateActiveNav();
+
+        // On click: expand target collapsible section if collapsed
+        floatingNavItems.forEach(function (item) {
+            item.addEventListener("click", function () {
+                var href = this.getAttribute("href");
+                if (!href || href.charAt(0) !== "#") return;
+                var targetEl = document.getElementById(href.substring(1));
+                if (!targetEl) return;
+                var header = targetEl.querySelector(".collapsible-header");
+                var content = targetEl.querySelector(".collapsible-content");
+                if (header && content && !header.classList.contains("expanded")) {
+                    header.classList.add("expanded");
+                    header.setAttribute("aria-expanded", "true");
+                    content.classList.add("expanded");
+                }
+            });
+        });
+    }
 
     // ─── Media Tabs ──────────────────────────────────────────────
     document.querySelectorAll(".tab-btn").forEach(function (tabBtn) {
