@@ -202,13 +202,14 @@ body {
     overflow: hidden;
     transition: max-height 0.4s ease;
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
     border-top: none;
     border-radius: 0 0 6px 6px;
 }
 
 .collapsible-content.expanded {
     max-height: 4000px;
+    border-color: var(--border-color);
 }
 
 .collapsible-body {
