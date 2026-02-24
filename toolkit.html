@@ -65,7 +65,7 @@
     </header>
 
     <!-- ─── About Section (Collapsible) ───────────────────────── -->
-    <section class="about-section">
+    <section class="about-section" id="section-about">
         <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
             <h2>About This Toolkit</h2>
             <span class="collapse-arrow">&#9660;</span>
@@ -152,7 +152,7 @@
     </section>
 
     <!-- ─── Step 0: Custom Role ───────────────────────────────── -->
-    <div class="step-container">
+    <div class="step-container" id="section-step0">
         <div class="step-number">0</div>
         <h3 class="step-title">Custom Role (Chat Settings)</h3>
         <p class="step-description">Configure the AI persona in NotebookLM settings. This prompt establishes course-specific analytical lenses that persist across all interactions.</p>
@@ -178,7 +178,7 @@
     <hr class="step-divider">
 
     <!-- ─── Step 1: Preliminary ───────────────────────────────── -->
-    <div class="step-container">
+    <div class="step-container" id="section-step1">
         <div class="step-number">1</div>
         <h3 class="step-title">Preliminary Analysis</h3>
         <p class="step-description">Run first to inventory readings, check for missing/unreadable sources, and get batch recommendations.</p>
@@ -207,7 +207,7 @@
     <hr class="step-divider">
 
     <!-- ─── Step 2: Gutting Batches ───────────────────────────── -->
-    <div class="step-container">
+    <div class="step-container" id="section-step2">
         <div class="step-number">2</div>
         <h3 class="step-title">Gutting Batches</h3>
         <p class="step-description">Run once per batch of 3-5 readings. Repeat as needed based on Preliminary recommendations.</p>
@@ -241,7 +241,7 @@
     <hr class="step-divider">
 
     <!-- ─── Step 3: Synthesis ─────────────────────────────────── -->
-    <div class="step-container">
+    <div class="step-container" id="section-step3">
         <div class="step-number">3</div>
         <h3 class="step-title">Synthesis</h3>
         <p class="step-description">Generate cross-reading synthesis and Issues for Consideration analysis. The Framework Check section updates based on selected course.</p>
@@ -270,7 +270,7 @@
     <hr class="step-divider">
 
     <!-- ─── Step 4: Media Generation (Optional) ──────────────── -->
-    <div class="step-container">
+    <div class="step-container" id="section-step4">
         <div class="step-number">4</div>
         <h3 class="step-title">Media Generation (Optional)</h3>
         <p class="step-description">Use NotebookLM Audio/Video Studio with these prompts after completing the workflow.</p>
@@ -333,6 +333,34 @@
     </footer>
 
 </div>
+
+<!-- Floating Section Nav -->
+<nav class="floating-nav" aria-label="Page sections">
+    <a href="#section-about" class="floating-nav-item">
+        <span class="floating-nav-label">About</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-step0" class="floating-nav-item">
+        <span class="floating-nav-label">0 — Custom Role</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-step1" class="floating-nav-item">
+        <span class="floating-nav-label">1 — Preliminary</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-step2" class="floating-nav-item">
+        <span class="floating-nav-label">2 — Gutting</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-step3" class="floating-nav-item">
+        <span class="floating-nav-label">3 — Synthesis</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-step4" class="floating-nav-item">
+        <span class="floating-nav-label">4 — Media</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+</nav>
 
 <!-- Scripts -->
 <script src="data/prompts.js"></script>

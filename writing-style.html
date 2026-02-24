@@ -54,7 +54,7 @@
     </header>
 
     <!-- ─── About Section (Collapsible) ────────────────────────── -->
-    <section class="about-section">
+    <section class="about-section" id="section-about">
         <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
             <h2>About This Tool</h2>
             <span class="collapse-arrow">&#9660;</span>
@@ -90,73 +90,84 @@
         </div>
     </section>
 
-    <!-- ─── Section: Student Guide ──────────────────────────────── -->
-    <div class="ws-step-container">
-        <h2 class="ws-section-header">Student Guide</h2>
-
-        <div class="concept-card" style="margin-bottom: 20px;">
-            <p><strong>What You Need:</strong> The Writing Style Builder prompt (below) &bull; 3-5 samples of your own writing (2,000-5,000 words total) &bull; Access to Claude.ai, ChatGPT, Gemini, or another AI chat tool</p>
+    <!-- ─── Section: Student Guide (Collapsible) ────────────────── -->
+    <section class="about-section" id="section-student">
+        <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
+            <div>
+                <h2>Student Guide</h2>
+                <p class="collapsible-hint">Paste prompt + 3–5 writing samples into your AI tool — expand for detailed step-by-step instructions</p>
+            </div>
+            <span class="collapse-arrow">&#9660;</span>
         </div>
+        <div class="collapsible-content">
+            <div class="collapsible-body">
 
-        <h3 class="ws-section-header" style="font-size: 0.75rem;">Choosing Your Writing Samples</h3>
-        <div class="concept-card" style="margin-bottom: 20px;">
-            <p><strong>Good samples:</strong> Papers where you felt confident in your writing. Work that sounds like you. Different types of writing if you write for different contexts (academic, professional, creative).</p>
-            <p><strong>Bad samples:</strong> Writing you rushed through. Papers you rewrote to match what you thought the professor wanted. Someone else's work.</p>
-            <p>Do not "clean up" your samples beyond fixing obvious typos. The AI needs to see your actual patterns, not an idealized version.</p>
+                <div class="concept-card" style="margin-bottom: 20px;">
+                    <p><strong>What You Need:</strong> The Writing Style Builder prompt (below) &bull; 3-5 samples of your own writing (2,000-5,000 words total) &bull; Access to Claude.ai, ChatGPT, Gemini, or another AI chat tool</p>
+                </div>
+
+                <h3 class="ws-section-header" style="font-size: 0.75rem;">Choosing Your Writing Samples</h3>
+                <div class="concept-card" style="margin-bottom: 20px;">
+                    <p><strong>Good samples:</strong> Papers where you felt confident in your writing. Work that sounds like you. Different types of writing if you write for different contexts (academic, professional, creative).</p>
+                    <p><strong>Bad samples:</strong> Writing you rushed through. Papers you rewrote to match what you thought the professor wanted. Someone else's work.</p>
+                    <p>Do not "clean up" your samples beyond fixing obvious typos. The AI needs to see your actual patterns, not an idealized version.</p>
+                </div>
+
+                <h3 class="ws-section-header" style="font-size: 0.75rem;">Step by Step</h3>
+                <ul class="numbered-steps">
+                    <li>
+                        <div class="step-text">
+                            <strong>Open a new conversation in your AI tool</strong>
+                            <p>Claude.ai, ChatGPT, Gemini — any AI chat tool that accepts file uploads.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-text">
+                            <strong>Upload the Writing Style Builder prompt</strong>
+                            <p>Copy the prompt from the card below and paste it into the chat, or upload the file if your tool supports file uploads. Include your 3-5 writing samples in the same message or as follow-up attachments.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-text">
+                            <strong>Answer the AI's questions</strong>
+                            <p>The AI will ask about your writing context, tone, structure, evidence habits, and personal patterns. Answer honestly. There are no wrong answers. The goal is to capture what you actually do, not what you think you should do.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-text">
+                            <strong>Review the test sample</strong>
+                            <p>The AI writes a test piece in your style before delivering the full package. Read it carefully. Does it sound like you? The AI will also flag any contamination it caught in its own self-audit.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-text">
+                            <strong>Iterate until it matches your voice</strong>
+                            <p>If the test sample doesn't sound right, tell the AI what's off. Be specific: "I wouldn't use that phrase," "My paragraphs are shorter than that," "I don't open with questions." The AI will revise and ask again.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-text">
+                            <strong>Receive your full style guide package</strong>
+                            <p>Once you approve the test sample, the AI delivers all five deliverables. Save them. These are reusable tools for any future AI-assisted writing.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="ws-section-header" style="font-size: 0.75rem; margin-top: 20px;">Using Your Style Guide After This</h3>
+                <div class="concept-card">
+                    <p><strong>In new AI conversations:</strong> Paste your Prompt Template at the start of a conversation, then give the AI your writing task.</p>
+                    <p><strong>In Claude.ai settings:</strong> Go to Settings &rarr; Profile &rarr; Writing Style. Paste your User Style Config. Claude will apply your style automatically in every conversation.</p>
+                    <p><strong>When results drift:</strong> Tell the AI what's wrong. "That doesn't sound like me. Check my style guide section on [tone/structure/vocabulary]." Iterate until it matches.</p>
+                </div>
+
+            </div>
         </div>
-
-        <h3 class="ws-section-header" style="font-size: 0.75rem;">Step by Step</h3>
-        <ul class="numbered-steps">
-            <li>
-                <div class="step-text">
-                    <strong>Open a new conversation in your AI tool</strong>
-                    <p>Claude.ai, ChatGPT, Gemini — any AI chat tool that accepts file uploads.</p>
-                </div>
-            </li>
-            <li>
-                <div class="step-text">
-                    <strong>Upload the Writing Style Builder prompt</strong>
-                    <p>Copy the prompt from the card below and paste it into the chat, or upload the file if your tool supports file uploads. Include your 3-5 writing samples in the same message or as follow-up attachments.</p>
-                </div>
-            </li>
-            <li>
-                <div class="step-text">
-                    <strong>Answer the AI's questions</strong>
-                    <p>The AI will ask about your writing context, tone, structure, evidence habits, and personal patterns. Answer honestly. There are no wrong answers. The goal is to capture what you actually do, not what you think you should do.</p>
-                </div>
-            </li>
-            <li>
-                <div class="step-text">
-                    <strong>Review the test sample</strong>
-                    <p>The AI writes a test piece in your style before delivering the full package. Read it carefully. Does it sound like you? The AI will also flag any contamination it caught in its own self-audit.</p>
-                </div>
-            </li>
-            <li>
-                <div class="step-text">
-                    <strong>Iterate until it matches your voice</strong>
-                    <p>If the test sample doesn't sound right, tell the AI what's off. Be specific: "I wouldn't use that phrase," "My paragraphs are shorter than that," "I don't open with questions." The AI will revise and ask again.</p>
-                </div>
-            </li>
-            <li>
-                <div class="step-text">
-                    <strong>Receive your full style guide package</strong>
-                    <p>Once you approve the test sample, the AI delivers all five deliverables. Save them. These are reusable tools for any future AI-assisted writing.</p>
-                </div>
-            </li>
-        </ul>
-
-        <h3 class="ws-section-header" style="font-size: 0.75rem; margin-top: 20px;">Using Your Style Guide After This</h3>
-        <div class="concept-card">
-            <p><strong>In new AI conversations:</strong> Paste your Prompt Template at the start of a conversation, then give the AI your writing task.</p>
-            <p><strong>In Claude.ai settings:</strong> Go to Settings &rarr; Profile &rarr; Writing Style. Paste your User Style Config. Claude will apply your style automatically in every conversation.</p>
-            <p><strong>When results drift:</strong> Tell the AI what's wrong. "That doesn't sound like me. Check my style guide section on [tone/structure/vocabulary]." Iterate until it matches.</p>
-        </div>
-    </div>
+    </section>
 
     <hr class="step-divider">
 
     <!-- ─── Section: The Prompt ─────────────────────────────────── -->
-    <div class="ws-step-container">
+    <div class="ws-step-container" id="section-prompt">
         <h2 class="ws-section-header" style="color: #a78bfa; border-bottom-color: rgba(167,139,250,0.3);">The Prompt</h2>
 
         <div class="instructions-box" style="margin-bottom: 12px;">
@@ -172,9 +183,12 @@
         <div class="prompt-card">
             <div class="prompt-card-header">
                 <span class="prompt-card-label" style="color: #a78bfa;">Writing Style Builder Prompt</span>
-                <button class="copy-btn" data-target="ws-prompt-text" id="ws-copy-btn">COPY</button>
+                <div class="prompt-card-actions">
+                    <button class="prompt-minimize-btn" data-target-body="ws-prompt-body">MINIMIZE</button>
+                    <button class="copy-btn" data-target="ws-prompt-text" id="ws-copy-btn">COPY</button>
+                </div>
             </div>
-            <div class="prompt-card-body" style="max-height: 400px;">
+            <div class="prompt-card-body" id="ws-prompt-body" style="max-height: 400px;">
                 <pre class="prompt-text" id="ws-prompt-text"># Writing Style Builder
 
 **How to use:** Upload this file to Claude.ai (or ChatGPT, Gemini, etc.) along with 3-5 samples of your writing (2,000-5,000 words total). The AI will walk you through the rest.
@@ -320,7 +334,7 @@ After delivering the test sample:
     <hr class="step-divider">
 
     <!-- ─── Section: Instructor Guide (Collapsible) ─────────────── -->
-    <section class="about-section">
+    <section class="about-section" id="section-instructor">
         <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
             <h2>Instructor Guide</h2>
             <span class="collapse-arrow">&#9660;</span>
@@ -406,7 +420,7 @@ After delivering the test sample:
     <hr class="step-divider">
 
     <!-- ─── Section: AI Contamination Problem (Collapsible) ─────── -->
-    <section class="about-section">
+    <section class="about-section" id="section-contamination">
         <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
             <h2>The AI Contamination Problem</h2>
             <span class="collapse-arrow">&#9660;</span>
@@ -538,6 +552,30 @@ After delivering the test sample:
     </footer>
 
 </div>
+
+<!-- Floating Section Nav -->
+<nav class="floating-nav nav-purple" aria-label="Page sections">
+    <a href="#section-about" class="floating-nav-item">
+        <span class="floating-nav-label">About</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-student" class="floating-nav-item">
+        <span class="floating-nav-label">Student Guide</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-prompt" class="floating-nav-item">
+        <span class="floating-nav-label">The Prompt</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-instructor" class="floating-nav-item">
+        <span class="floating-nav-label">Instructor Guide</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+    <a href="#section-contamination" class="floating-nav-item">
+        <span class="floating-nav-label">AI Contamination</span>
+        <span class="floating-nav-dot"></span>
+    </a>
+</nav>
 
 <!-- Scripts -->
 <script src="scripts/main.js"></script>
