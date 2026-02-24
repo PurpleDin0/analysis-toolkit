@@ -90,9 +90,17 @@
         </div>
     </section>
 
-    <!-- ─── Section: Student Guide ──────────────────────────────── -->
-    <div class="ws-step-container">
-        <h2 class="ws-section-header">Student Guide</h2>
+    <!-- ─── Section: Student Guide (Collapsible) ────────────────── -->
+    <section class="about-section" id="section-student">
+        <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
+            <div>
+                <h2>Student Guide</h2>
+                <span class="collapsible-hint">Expand for step-by-step instructions and usage details</span>
+            </div>
+            <span class="collapse-arrow">&#9660;</span>
+        </div>
+        <div class="collapsible-content">
+            <div class="collapsible-body">
 
                 <h3 class="ws-section-header" style="font-size: 0.75rem;">Choosing Your Writing Samples</h3>
                 <div class="concept-card" style="margin-bottom: 20px;">
@@ -408,7 +416,7 @@ After delivering the test sample:
     <hr class="step-divider">
 
     <!-- ─── Section: AI Contamination Problem (Collapsible) ─────── -->
-    <section class="about-section">
+    <section class="about-section" id="section-contamination">
         <div class="collapsible-header" role="button" tabindex="0" aria-expanded="false">
             <h2>The AI Contamination Problem</h2>
             <span class="collapse-arrow">&#9660;</span>
@@ -544,24 +552,24 @@ After delivering the test sample:
 <!-- Floating Section Nav -->
 <nav class="floating-nav nav-purple" aria-label="Page sections">
     <a href="#section-about" class="floating-nav-item">
-        <span class="floating-nav-label">About</span>
         <span class="floating-nav-dot"></span>
+        <span class="floating-nav-label">About</span>
     </a>
     <a href="#section-student" class="floating-nav-item">
-        <span class="floating-nav-label">Student Guide</span>
         <span class="floating-nav-dot"></span>
+        <span class="floating-nav-label">Student Guide</span>
     </a>
     <a href="#section-prompt" class="floating-nav-item">
-        <span class="floating-nav-label">The Prompt</span>
         <span class="floating-nav-dot"></span>
+        <span class="floating-nav-label">The Prompt</span>
     </a>
     <a href="#section-instructor" class="floating-nav-item">
-        <span class="floating-nav-label">Instructor Guide</span>
         <span class="floating-nav-dot"></span>
+        <span class="floating-nav-label">Instructor Guide</span>
     </a>
     <a href="#section-contamination" class="floating-nav-item">
-        <span class="floating-nav-label">AI Contamination</span>
         <span class="floating-nav-dot"></span>
+        <span class="floating-nav-label">AI Contamination</span>
     </a>
 </nav>
 

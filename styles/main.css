@@ -1026,7 +1026,7 @@ body {
 
 .floating-nav {
     position: fixed;
-    right: 22px;
+    left: 22px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -1038,7 +1038,7 @@ body {
 .floating-nav-item {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 8px;
     text-decoration: none;
     padding: 5px 0;
@@ -1052,9 +1052,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     white-space: nowrap;
-    text-align: right;
+    text-align: left;
     opacity: 0;
-    transform: translateX(6px);
+    transform: translateX(-6px);
     transition: opacity 0.2s, transform 0.2s, color 0.2s;
     pointer-events: none;
 }
